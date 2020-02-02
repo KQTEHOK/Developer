@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Домашнее задание 4</title>
+
+</head>
+<body>
+   <script src = 'main.js'></script>
+
+   <!-- <script>
+//  Task 02
+   const vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+   let str1 = vegetables.toString();
+   let str2 = vegetables.join();
+      
+   document.writeln(str1); // "Капуста, Репа, Редиска, Морковка"
+   document.writeln('<br>');
+   document.writeln(str2); // "Капуста, Репа, Редиска, Морковка"
+
+   </script> -->
+      
+      
+   <!-- <script>
+// Task 13
+let arr = ["php", "php", "css", "css","script", "script", "html", "html", "java"];
+   function removeDuplicates(arr) {
+      let obj = {},
+         out=[];
+      for(let i = 0; i < arr.length; i++) {
+      let str = arr[i];
+         obj[str] = true;
+      }
+      for (i in obj) {
+         out.push(i);
+      }
+      return out;
+   }
+result = removeDuplicates(arr);
+document.writeln(arr + '<br>');
+document.writeln(result);
+    </script -->
+
+
+   <!-- <script>
+// Task 14 
+   let array = [1,2,3,4,5,6,7,8,9];
+      function getFirst(array, n) {
+         if (array == null) return false;
+         if (n == null) return array[0];
+         return array.slice(0, n);
+      };
+            
+   document.writeln(getFirst(array)+'<br>');
+   document.writeln(getFirst(array, 4)+'<br>');
+   document.writeln(getFirst(array,-3));
+   </script> -->
+
+   <!-- <script>
+// Task 14
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [4, 5, 6];
+let arr3 = [];
+   if (arr1.length > arr2.length) {
+      let count = arr1.length;
+   } else {
+      let count = arr2.length;
+   }
+   for (let i = 0; i < count; i++) {
+      if (arr2[i] === undefined) {
+            arr2.push(0);
+      } else {
+         if (arr1[i] === undefined) {
+            arr1.push(0);
+         }
+      }
+            arr3.push(arr1[i] + arr2[i]);
+   }
+   document.writeln(arr3);
+      </script> -->
+
+   <!-- <script>
+// Task 17
+   const array1 = [5, 2, 1, -10, 8];
+   const array2 = [5, 2, 1, -9, 3, 7];
+         
+   let union = function(array1, array2) {
+   let array3 = [];
+   let arr = array1.concat(array2);
+   let len = arr.length;
+   let obj = {};
+         
+      while(len--) {
+      let itm = arr[len];
+         if(!obj[itm]) {
+            array3.unshift(itm);
+            obj[itm] = true;
+         }
+      }
+         
+      return array3;
+   };
+
+   document.writeln(union(array1, array2));
+         
+   </script> -->
+
+   <!-- <script>
+// Task 18
+   const arr1 = [1, 2, 'a'];
+   const arr2 = [1, 2, 3, 4, 'b'];  
+      
+   function arrayDiff(arr1, arr2) {
+      var obj1={}, obj2={}, diff=[], key;
+      for (let i=0; i < arr1.length; i++) { obj1[arr1[i]] = true; }
+      for (let i=0; i < arr2.length; i++) { obj2[arr2[i]] = true; }
+      for (key in obj1) { if (!(key in obj2)) { diff.push(key); } }
+      for (key in obj2) { if (!(key in obj1)) { diff.push(key); } }
+      return diff;
+   }
+      
+   document.writeln(arrayDiff(arr1, arr2));
+   document.writeln('<br>');
+   document.writeln(arrayDiff(arr2, arr1));
+      
+   </script> -->
+
+   <!-- <script>
+// Task 20
+   function sumOfSquares(arr) {
+      return arr.reduce(function (prev, cur) {
+      return prev + cur * cur;
+   })
+   };
+      
+   document.writeln(sumOfSquares([1, 2, 3, 4, 5]));
+      
+   </script> -->
+
+   <!-- <script>
+// Task 21
+   let array = [NaN, 0, 77, false, -17, '',undefined, 99, null];
+      function filterFalse(arr) {
+      return arr.filter(function(v) { return !!v; });
+      }
+      
+   document.writeln(filterFalse(array));
+      
+   </script> -->
+
+   <!-- <script>
+// Task 22
+   function moveElement(arr,from,to) {
+      arr.splice(to,0,arr.splice(from,1)[0]);
+      return arr;
+   };
+   let arr = [ 'a', 'b', 'c', 'd', 'e'];
+   document.writeln(moveElement(arr,3,1));
+
+   </script> -->
+   
+   <!-- <script>
+// Task 24
+   function generateNumbers(start, len) {
+      let arr = new Array(len);
+      for (let i = 0; i < len; i++, start++) {
+         arr[i] = start;
+      }
+      return arr;
+   }
+      
+   document.writeln(generateNumbers(0, 9) + '<br>');
+   document.writeln(generateNumbers(-5, 9));
+      
+   </script> -->
+
+   <!-- <script>
+// Task 25
+   let numbers = [2, 3, 5, 7, 11, 13, 17];
+   function currentSums(numbers) {
+   let result = [];
+      numbers.reduce(function(sum, current, i) {
+      return result[i] = sum + current;
+      }, 0);
+      
+   alert( result );
+   }
+   currentSums(numbers); // [2,5,10,17,28,41,58]
+   </script> -->
+
+
+   
+</body>
+</html>
